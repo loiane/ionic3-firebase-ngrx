@@ -1,0 +1,11 @@
+<ion-item-sliding>
+  <ion-item>{{ task.title }}</ion-item>
+  <ion-item-options side="right">
+    <button ion-button color="primary" icon-start (click)="onEditClick()">
+      <ion-icon name="create"></ion-icon>
+    </button>
+    <button ion-button color="danger" icon-start (click)="onDeleteClick()">
+      <ion-icon name="trash"></ion-icon>
+    </button>
+  </ion-item-options>
+</ion-item-sliding>
