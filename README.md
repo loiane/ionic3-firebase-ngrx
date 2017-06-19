@@ -24,7 +24,7 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
-## Todo: updgrade to @ngrx/platform once is available
+## Todo: upgrade to @ngrx/platform once is available
 
 * June/2017
 * This example is currently using ngrx/store 2.2 (I personally do not like how store files are organized)
