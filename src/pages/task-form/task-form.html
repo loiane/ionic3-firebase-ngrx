@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="form">
+    <ion-list no-lines>
+      <ion-item>
+        <ion-label floating>
+          Title
+        </ion-label>
+        <ion-input type="text" formControlName="title"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="validateField('title')" >
+        <span class="invalid-msg">Please enter a title</span>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>
+          Description
+        </ion-label>
+        <ion-input type="text" formControlName="description"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="spacer" style="height:40px;" id="login-spacer1"></div>
+
+    <button id="login-button1" ion-button color="stable" block (click)="onSubmit()">
+      Save
+    </button>
+
+    <div padding class="error" *ngIf="error$ | async as error">
+      <p>{{ error.message }}</p>
+    </div>
+  </form>
+</ion-content>
+
