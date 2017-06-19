@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form [formGroup]="form">
+    <ion-list no-lines>
+      <ion-item>
+        <ion-label floating>
+          Email
+        </ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="validateField('email')" >
+        <span class="invalid-msg">Invalid email address</span>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>
+          Password
+        </ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="validateField('password')" >
+        <span class="invalid-msg">Password must be at least 6 characters long</span>
+      </ion-item>
+    </ion-list>
+
+    <div class="spacer" style="height:40px;" id="login-spacer1"></div>
+
+    <button id="login-button1" ion-button color="stable" block (click)="onSubmit()">
+      Log in
+    </button>
+    <button id="login-button2" ion-button clear color="positive" block href-inappbrowser="/signup">
+      Or create an account
+    </button>
+
+    <display-error [error]="error$"></display-error>
+  </form>
+</ion-content>
