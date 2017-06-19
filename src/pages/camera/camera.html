@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Camera</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+
+    <button ion-button icon-right (click)="onTakePicture()">
+      Take Picture <ion-icon name="camera"></ion-icon>
+    </button>
+
+    <img *ngIf="image$ | async as image"
+      [src]="domSanitizer.bypassSecurityTrustUrl(image)" />
+
+    </ion-card-content>
+  </ion-card>
+
+  <display-error [error]="error$"></display-error>
+</ion-content>
