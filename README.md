@@ -24,3 +24,8 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+## Todo: upgrade to @ngrx/platform once is available
+
+* June/2017
+* This example is currently using ngrx/store 2.2 (I personally do not like how store files are organized)
+* @ngrx/plataform is currently in beta. This new version allows lazy loading reducers, effects. Once it is available on npm and stable will update this sample to this version as well, to organize the application better and follow Angular/Ionic files/modules organization.
